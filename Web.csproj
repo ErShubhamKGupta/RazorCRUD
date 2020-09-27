@@ -1,0 +1,86 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+        <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+       <Compile Remove="Infrastructure\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" />
+       <Compile Remove="Infrastructure\Data\ApplicationDbContext.cs" />
+       <Compile Remove="Infrastructure\Repositories\UnitOfWork.cs" />
+       <Compile Remove="Infrastructure\Repositories\GenericRepositoryAsync.cs" />
+       <Compile Remove="Core\Entities\Employee.cs" />
+       <Compile Remove="Core\obj\Debug\netcoreapp3.1\.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" />
+       <Compile Remove="Core\Interfaces\IGenericRepositoryAsync.cs" />
+       <Compile Remove="Core\Interfaces\IUnitOfWork.cs" />
+       <Compile Remove="Core\Interfaces\IEmployeeRepositoryAsync.cs" />
+     </ItemGroup>
+     <ItemGroup>
+       <None Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll" />
+       <None Remove="Infrastructure\bin\Debug\netcoreapp3.1\Core.dll" />
+       <None Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.pdb" />
+       <None Remove="Infrastructure\bin\Debug\netcoreapp3.1\Core.pdb" />
+       <None Remove="Infrastructure\obj\Infrastructure.csproj.nuget.g.targets" />
+       <None Remove="Infrastructure\obj\Infrastructure.csproj.EntityFrameworkCore.targets" />
+       <None Remove="Infrastructure\obj\project.nuget.cache" />
+       <None Remove="Infrastructure\obj\Infrastructure.csproj.nuget.g.props" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.dll" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.pdb" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.assets.cache" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.genruntimeconfig.cache" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.FileListAbsolute.txt" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CoreCompileInputs.cache" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csproj.CopyComplete" />
+       <None Remove="Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache" />
+       <None Remove="Core\bin\Debug\netcoreapp3.1\Core.dll" />
+       <None Remove="Core\bin\Debug\netcoreapp3.1\Core.pdb" />
+       <None Remove="Core\obj\Core.csproj.nuget.g.targets" />
+       <None Remove="Core\obj\project.nuget.cache" />
+       <None Remove="Core\obj\Core.csproj.nuget.g.props" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.csproj.FileListAbsolute.txt" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.dll" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.assets.cache" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.pdb" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache" />
+       <None Remove="Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache" />
+     </ItemGroup>
+     <ItemGroup>
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json" />
+       <Content Remove="Infrastructure\obj\Infrastructure.csproj.nuget.dgspec.json" />
+       <Content Remove="Infrastructure\obj\project.assets.json" />
+       <Content Remove="Core\bin\Debug\netcoreapp3.1\Core.deps.json" />
+       <Content Remove="Core\obj\project.assets.json" />
+       <Content Remove="Core\obj\Core.csproj.nuget.dgspec.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.json" />
+       <Content Remove="Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.runtimeconfig.dev.json" />
+     </ItemGroup>
+     <ItemGroup>
+       <ProjectReference Include="Core\Core.csproj">
+         <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+       </ProjectReference>
+       <ProjectReference Include="Infrastructure\Infrastructure.csproj">
+         <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+       </ProjectReference>
+     </ItemGroup>
+     <ItemGroup>
+       <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.21" />
+       <PackageReference Include="MySql.Data" Version="8.0.21" />
+       <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.8" />
+       <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.8">
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+         <PrivateAssets>all</PrivateAssets>
+       </PackageReference>
+       <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8">
+         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+         <PrivateAssets>all</PrivateAssets>
+       </PackageReference>
+     </ItemGroup>
+</Project>
