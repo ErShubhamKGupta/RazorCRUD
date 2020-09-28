@@ -40,7 +40,6 @@ namespace Web
             services.AddHttpContextAccessor();
             services.AddTransient<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<IRazorRenderService, RazorRenderService>();
-            services.AddRazorPages();
             #endregion
             services.AddRazorPages();
         }
